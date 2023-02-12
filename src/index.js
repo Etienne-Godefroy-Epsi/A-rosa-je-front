@@ -3,19 +3,22 @@ import ReactDOM from 'react-dom/client'
 import './styles/index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
-import NavBar from './NavBar'
+import NavBar from './components/NavBar'
 import Gardiens from './Gardiens'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Search from './components/Search'
+import Log from './components/Log'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
     <React.StrictMode>
         <BrowserRouter>
             <NavBar />
-                <Routes>
-                    <Route path="/" element={<App />} />
-                    <Route path="/gardiens" element={<Gardiens />}/>
-                </Routes>
+            <Routes>
+                <Route path="/" element={<Search />} />
+                <Route path="/search" element={<Search />} />
+                <Route path="/Log" element={<Log />} />
+            </Routes>
         </BrowserRouter>
     </React.StrictMode>
 )

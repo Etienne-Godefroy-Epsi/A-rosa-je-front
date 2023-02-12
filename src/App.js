@@ -49,8 +49,6 @@ const App = () => {
                 Get Location
             </button>
 
-            <iframe id="iframeId" height="200px" width="100%"></iframe>
-
             <div className="date">
                 <h2>Dates</h2>
                 <div className="datededebut">

@@ -1,0 +1,14 @@
+#searchBar{
+    margin-top: 30px;
+    margin-left :40%;
+    margin-right: 40%;
+    margin-bottom: 30px;
+    
+}
+.search__result{
+    
+    margin-left :40%;
+    margin-right: 40%;
+    
+    border: 1px black solid;
+}
