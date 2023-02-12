@@ -17,10 +17,7 @@ const SignUpForm = () => {
             '.password-confirm.error'
         )
 
-        const usersInfo = await axios.get('http://localhost:8080/users/1')
         passwordConfirmError.innerHTML = ''
-
-        console.log(usersInfo)
 
         if (password !== controlPassword) {
             passwordConfirmError.innerHTML =
@@ -28,7 +25,7 @@ const SignUpForm = () => {
         } else {
             await axios({
                 method: 'post',
-                url: 'http://localhost:8080/users/client/inscription',
+                url: `http://localhost:8080/users/client/inscription?nom=${nom}&prenom=${prenom}&mdp=${password}&adresse=${adresse}&email=${email}`,
                 data: {
                     prenom,
                     nom,

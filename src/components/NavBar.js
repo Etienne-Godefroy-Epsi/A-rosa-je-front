@@ -11,8 +11,14 @@ const NavBar = () => {
             <div id="nav">
                 <div className="logo">
                     <NavLink exact="true" to="/">
-                        <div className="logo">
-                            <h3>logo</h3>
+                        <div className="logoArosaje">
+                            <h3>
+                                <img
+                                    src=".\img\icons8-growing-plant-48.png"
+                                    title="LogoArosaje"
+                                    alt="LogoArosaje"
+                                />
+                            </h3>
                         </div>
                     </NavLink>
                 </div>
@@ -20,29 +26,57 @@ const NavBar = () => {
                     <div className="logo">
                         <NavLink exact="true" to="/plantes">
                             <div className="logoPlante">
-                                <h3>plantes</h3>
+                                <h3>
+                                    <img
+                                        src=".\img\icons8-potted-plant-50.png"
+                                        title="MesPlantes"
+                                        alt="MesPlantes"
+                                    />
+                                </h3>
                             </div>
                         </NavLink>
                     </div>
                 ) : null}
                 {userId ? (
                     <div className="logo">
-                        <div className="logoMessage">
-                            <h3>Mssg</h3>
-                        </div>
+                        <NavLink exact="true" to="/Contrats">
+                            <div className="logoMessage">
+                                <h3>
+                                    <img
+                                        src=".\img\icons8-agreement-50.png"
+                                        title="MesContrats"
+                                        alt="MesContrats"
+                                    />
+                                </h3>
+                            </div>
+                        </NavLink>
                     </div>
                 ) : null}
                 {userId ? (
                     <div className="logo">
-                        <div className="logoProfil">
-                            <h3>Profil</h3>
-                        </div>
+                        <NavLink exact="true" to="/Profil">
+                            <div className="logoProfil">
+                                <h3>
+                                    <img
+                                        src=".\img\icons8-male-user-50.png"
+                                        title="MonProfil"
+                                        alt="MonProfil"
+                                    />
+                                </h3>
+                            </div>
+                        </NavLink>
                     </div>
                 ) : (
                     <div className="logo">
                         <NavLink exact="true" to="/Log">
                             <div className="logoProfil">
-                                <h3>Se connecter</h3>
+                                <h3>
+                                    <img
+                                        src=".\img\icons8-login-50.png"
+                                        title="SeConnecter"
+                                        alt="SeConnecter"
+                                    />
+                                </h3>
                             </div>
                         </NavLink>
                     </div>

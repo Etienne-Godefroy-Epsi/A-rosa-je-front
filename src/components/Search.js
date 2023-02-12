@@ -6,6 +6,8 @@ function Search() {
     const [datas, setDatas] = useState([])
     const [searchTerm, setSearchTerm] = useState([])
 
+    const userId = localStorage.getItem('userId')
+
     useEffect(() => {
         fetch('http://localhost:8080/users/gardien/disponible')
             .then((response) => response.json())
@@ -16,8 +18,6 @@ function Search() {
         let value = e.target.value
         setSearchTerm(value)
     }
-
-    console.log(searchTerm)
 
     return (
         <div>
@@ -33,13 +33,18 @@ function Search() {
             <div className="search__results">
                 {datas
                     .filter((val) => {
-                        return val.adresse.includes(searchTerm)
+                        return val.adresse.toLowerCase().includes(searchTerm)
                     })
                     .map((val) => {
                         return (
-                            <div className="search__result" key={val.id}>
-                                <div> {val.nom} </div>
-                                <div>{val.adresse} </div>
+                            <div className="gardienDispo">
+                                <div className="search__result" key={val.id}>
+                                    <div> {val.nom} </div>
+                                    <div>{val.adresse} </div>
+                                    {userId ? (
+                                        <button>Demander un gardiennage</button>
+                                    ) : null}
+                                </div>
                             </div>
                         )
                     })}
