@@ -67,10 +67,10 @@ function Search() {
                     .map((val) => {
                         return (
                             <div className="gardienDispo">
-                                <div className="search__result" key={val.id}>
+                                <div className="search__result bc-g" key={val.id}>
                                     <div> {val.id}</div>
-                                    <div> {val.nom} </div>
-                                    <div>{val.adresse} </div>
+                                    <div className="big_m"> {val.nom} </div>
+                                    <div className="sma_o">{val.adresse} </div>
                                     {userId ? (
                                         
                                         <button>Demander un gardiennage</button>
