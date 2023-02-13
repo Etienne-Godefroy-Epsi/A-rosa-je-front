@@ -24,7 +24,7 @@ const NavBar = () => {
                 </div>
                 {userId ? (
                     <div className="logo">
-                        <NavLink exact="true" to="/plantes">
+                        <NavLink exact="true" to="/Plante">
                             <div className="logoPlante">
                                 <h3>
                                     <img

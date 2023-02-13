@@ -8,6 +8,7 @@ import Search from './components/Search'
 import Log from './components/Log'
 import Profil from './components/Profil'
 import Contrats from './components/Contrats'
+import Plante from './components/Plantes'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
@@ -16,7 +17,7 @@ root.render(
             <NavBar />
             <Routes>
                 <Route path="/" element={<Search />} />
-                <Route path="/search" element={<Search />} />
+                <Route path="/Plante" element={<Plante />} />
                 <Route path="/Log" element={<Log />} />
                 <Route path="/Profil" element={<Profil />} />
                 <Route path="/Contrats" element={<Contrats />} />
