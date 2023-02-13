@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import '../styles/Search.css'
+import '../styles/Button.css'
 
 function Search() {
     const [datas, setDatas] = useState([])
@@ -38,11 +39,11 @@ function Search() {
                     .map((val) => {
                         return (
                             <div className="gardienDispo">
-                                <div className="search__result" key={val.id}>
-                                    <div> {val.nom} </div>
-                                    <div>{val.adresse} </div>
+                                <div className="search__result bc-g" key={val.id}>
+                                    <div className="big_m"> {val.nom} </div>
+                                    <div className="sma_o">{val.adresse} </div>
                                     {userId ? (
-                                        <button>Demander un gardiennage</button>
+                                        <button className="bp-bcg">Demander un gardiennage</button>
                                     ) : null}
                                 </div>
                             </div>
