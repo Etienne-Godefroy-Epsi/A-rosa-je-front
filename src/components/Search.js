@@ -50,6 +50,7 @@ function Search() {
 
     return (
         <div>
+            <h2 className='texte'>Nos gardiens disponible</h2>
             <div className="searchBar">
                 <input
                     type="text"
@@ -68,12 +69,13 @@ function Search() {
                         return (
                             <div className="gardienDispo">
                                 <div className="search__result bc-g" key={val.id}>
-                                    <div> {val.id}</div>
-                                    <div className="big_m"> {val.nom} </div>
-                                    <div className="sma_o">{val.adresse} </div>
+                                {/* <div className="texte"> {val.id} </div> */}
+
+                                    <div className="texte"> {val.nom} </div>
+                                    <div className="texte">{val.adresse} </div>
                                     {userId ? (
                                         
-                                        <button>Demander un gardiennage</button>
+                                        <button className='bp-bcy texte'>Demander un gardiennage</button>
                                     
                                     ) : null}
                                 </div>
